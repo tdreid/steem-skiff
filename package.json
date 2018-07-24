@@ -1,0 +1,25 @@
+{
+  "name": "steem-sak",
+  "version": "0.1.0",
+  "description": "",
+  "main": "steem-sak.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdreid/steem-sak.git"
+  },
+  "keywords": [
+    "steem",
+    "blockchain",
+    "cli",
+    "utility"
+  ],
+  "author": "Trevor Reid <trevor.d.reid@gmail.com> (http://tdreid.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tdreid/steem-sak/issues"
+  },
+  "homepage": "https://github.com/tdreid/steem-sak#readme"
+}
