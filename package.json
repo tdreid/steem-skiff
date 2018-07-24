@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/tdreid/steem-sak#readme",
   "dependencies": {
+    "commander": "^2.16.0",
     "steem": "^0.7.1"
   }
 }
