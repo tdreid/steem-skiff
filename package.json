@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Steem blockchain utility CLI",
   "main": "steem-sak.js",
+  "bin": {"sak": ".\steem.sak.js"},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
