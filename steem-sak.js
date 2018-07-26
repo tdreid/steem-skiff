@@ -9,3 +9,5 @@ sak
   .action(require('./login'));
 
 sak.version(current_version, '-v, --version').parse(process.argv);
+
+if (sak.args.length === 0) sak.help();
