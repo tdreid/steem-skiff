@@ -14,6 +14,13 @@ sak
   .description('Check if a credential is legit')
   .action(require('./check'));
 
+sak
+  .command('get-posts <tag> <limit> [properties...]')
+  .description('Gets the most recent <limit> posts for <tag>')
+  .option('-s, --space <space>', 'Passed as [space] to JSON.stringify()', null)
+  .option('-k, --skip-transform', 'Bypass JSON.stringify()')
+  .action(require('./getPosts'));
+
 sak.version(current_version, '-v, --version').parse(process.argv);
 
 if (sak.args.length === 0) sak.help();
