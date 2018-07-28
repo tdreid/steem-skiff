@@ -3,6 +3,13 @@ __Steem blockchain utility CLI__
 
 Swiss Army Knife | Steem All Knowing | Etc.
 
+## Install
+
+```
+npm i -g https://github.com/tdreid/steem-sak
+
+```
+
 ## Use
 
 ```
