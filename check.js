@@ -1,23 +1,23 @@
 const prompt = require('prompt');
 const checkCredential = require('./checkCredential');
 
-module.exports = (mode, user, password, cmd) => {
-  if (!password) {
+module.exports = (mode, user, credential, cmd) => {
+  if (!credential) {
     prompt.message = '';
     prompt.start();
     prompt.get(
       [
         {
-          name: 'password',
+          name: 'credential',
           hidden: true,
           replace: '*',
-          description: 'Enter password',
+          description: 'Enter credential',
           required: true
         }
       ],
       (err, result) => {
         if (!err) {
-          checkCredential(mode, user, result.password, cmd.type);
+          checkCredential(mode, user, result.credential, cmd.type);
         } else {
           console.error(err);
           process.exit(1);
@@ -25,6 +25,6 @@ module.exports = (mode, user, password, cmd) => {
       }
     );
   } else {
-    checkCredential(mode, user, password, cmd.type);
+    checkCredential(mode, user, credential, cmd.type);
   }
 };

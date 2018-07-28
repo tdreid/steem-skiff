@@ -4,7 +4,7 @@ const current_version = require('./package.json').version;
 const sak = require('commander');
 
 sak
-  .command('check <mode> <user> [password]')
+  .command('check <mode> <user> [credential]')
   .option(
     '-t, --type <type>',
     'Type of wif',
