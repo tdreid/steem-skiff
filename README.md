@@ -1,5 +1,49 @@
 # steem-sak
-Steem blockchain utility CLI
+__Steem blockchain utility CLI__
+
+Swiss Army Knife | Steem All Knowing | Etc.
+
+## Use
+
+```
+  Usage: sak [options] [command]
+
+  Options:
+
+    -v, --version                                      output the version number
+    -h, --help                                         output usage information
+
+  Commands:
+
+    check [options] <mode> <user> [credential]         Check if a credential is legit
+```    
+    
+### check
+
+```
+  Usage: check [options] <mode> <user> [credential]
+
+  Check if a credential is legit
+
+  Options:
+
+    -t, --type <type>  Type of wif; can be posting, active, or owner. (default: posting)
+    -h, --help         output usage information
+```
+
+### get-posts    
+
+```
+  Usage: get-posts [options] <tag> <limit> [properties...]
+
+  Gets the most recent <limit> posts for <tag>
+
+  Options:
+
+    -s, --space <space>   Passed as [space] to JSON.stringify() (default: null)
+    -k, --skip-transform  Bypass JSON.stringify()
+    -h, --help            output usage information
+```    
 
 ## License
 MIT License
