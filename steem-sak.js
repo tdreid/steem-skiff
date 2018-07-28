@@ -7,7 +7,7 @@ sak
   .command('check <mode> <user> [credential]')
   .option(
     '-t, --type <type>',
-    'Type of wif',
+    'Type of wif; can be posting, active, or owner.',
     /^(posting|active|owner)$/i,
     'posting'
   )
