@@ -25,10 +25,10 @@ sak
 
 sak
   .command('list-post-properties [limit]')
+  .alias('lpp')
   .description(
     'See a list of available properties based on [limit] recent posts'
   )
-  .alias('lpp')
   .action(require('./listPostProperties'));
 
 sak.version(current_version, '-v, --version').parse(process.argv);
