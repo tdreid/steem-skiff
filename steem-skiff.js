@@ -28,7 +28,7 @@ skiff
   .command('list-post-properties [limit]')
   .alias('lpp')
   .description(
-    'See a list of available properties based on [limit] recent posts'
+    'List properties based on [limit] recent posts'
   )
   .action(require('./listPostProperties'));
 

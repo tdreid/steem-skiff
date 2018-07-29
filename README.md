@@ -58,7 +58,7 @@ npm i -g https://github.com/tdreid/steem-skiff
 ```
   Usage: list-post-properties|lpp [options] [limit]
 
-  See a list of available properties based on [limit] recent posts
+  List properties based on [limit] recent posts
 
   Options:
 
