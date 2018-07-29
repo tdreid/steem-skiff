@@ -50,9 +50,22 @@ npm i -g https://github.com/tdreid/steem-sak
     -s, --space <space>   Passed as [space] to JSON.stringify() (default: null)
     -k, --skip-transform  Bypass JSON.stringify()
     -h, --help            output usage information
-```    
+```
+
+### list-post-properties
+
+```
+  Usage: list-post-properties|lpp [options] [limit]
+
+  See a list of available properties based on [limit] recent posts
+
+  Options:
+
+    -h, --help  output usage information
+```
 
 ## License
+
 MIT License
 
 Copyright (c) 2018 Trevor Reid
