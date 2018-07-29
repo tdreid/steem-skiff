@@ -10,7 +10,7 @@ module.exports = (limit = 1) => {
         if (response.length > 0) {
           let exemplar = {};
           response.forEach(post => assign(exemplar, post));
-          console.log(keys(exemplar).join(', '));
+          console.log(keys(exemplar).join(' '));
         } else {
           console.log('Nothing found.');
         }
