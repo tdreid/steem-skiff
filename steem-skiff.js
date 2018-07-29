@@ -19,17 +19,19 @@ skiff
   .command('get-posts <tag> <limit> [properties...]')
   .alias('gp')
   .description('Gets the most recent <limit> posts for <tag>')
+  .option(
+    '-f, --format <format>',
+    'specify output as plain, stringified, or csv',
+    /^(plain|stringified|csv)$/i,
+    'plain'
+  )
   .option('-s, --space <space>', 'passed as [space] to JSON.stringify()', null)
-  .option('-k, --skip-transform', 'bypass JSON.stringify()')
-  .option('-c, --csv', 'output as comma separated values')
   .action(require('./getPosts'));
 
 skiff
   .command('list-post-properties [limit]')
   .alias('lpp')
-  .description(
-    'List properties based on [limit] recent posts'
-  )
+  .description('List properties based on [limit] recent posts')
   .action(require('./listPostProperties'));
 
 skiff.version(current_version, '-v, --version').parse(process.argv);

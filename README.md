@@ -47,10 +47,9 @@ npm i -g https://github.com/tdreid/steem-skiff
 
   Options:
 
-    -s, --space <space>   passed as [space] to JSON.stringify() (default: null)
-    -k, --skip-transform  bypass JSON.stringify()
-    -c, --csv             output as comma separated values
-    -h, --help            output usage information
+    -f, --format <format>  specify output as plain, stringified, or csv (default: plain)
+    -s, --space <space>    passed as [space] to JSON.stringify() (default: null)
+    -h, --help             output usage information
 ```
 
 ### list-post-properties

@@ -2,12 +2,16 @@ const steem = require('steem');
 
 module.exports = (tag, limit, properties, cmd) => {
   steem.api.getDiscussionsByCreated({ tag, limit }, (err, result) => {
-    const pick = require('lodash/pick');
-    result = result.map(post => pick(post, properties));
     if (!err) {
-      if (!cmd.skipTransform) {
-        const isInteger = require('lodash/isInteger');
-        if (cmd.csv) {
+      if (properties.length > 0) {
+        const pick = require('lodash/pick');
+        result = result.map(post => pick(post, properties));
+      }
+      switch (cmd.format) {
+        case 'plain':
+          console.log(result);
+          break;
+        case 'csv':
           const csv = require('jsonexport');
           csv(result, (err, csvOutput) => {
             if (!err) {
@@ -17,16 +21,21 @@ module.exports = (tag, limit, properties, cmd) => {
               process.exit(13);
             }
           });
-        } else {
-          const jsonString = JSON.stringify(
-            result,
-            null,
-            isInteger(Number(cmd.space)) ? Number(cmd.space) : cmd.space
+          break;
+        case 'stringified':
+          console.log(
+            JSON.stringify(
+              result,
+              null,
+              Number.isInteger(Number(cmd.space))
+                ? Number(cmd.space)
+                : cmd.space
+            )
           );
-          console.log(jsonString);
-        }
-      } else {
-        console.log(result);
+          break;
+        default:
+          console.error(`${cmd.format} is not a supported format option`);
+          process.exit(21);
       }
     } else {
       console.error(err);
