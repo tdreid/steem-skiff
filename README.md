@@ -22,7 +22,9 @@ npm i -g https://github.com/tdreid/steem-skiff
 
     check|ck [options] <mode> <user> [credential]         Check if a credential is legit
     get-posts|gp [options] <tag> <limit> [properties...]  Gets the most recent <limit> posts for <tag>
+    get-key|gk [options] <user> [password]                Gets a key given user's password
     list-post-properties|lpp [limit]                      List properties based on [limit] recent posts
+    make-test-account|mta <user> [password]               Make a test account on https://testnet.steem.vc
 ```    
     
 ### check
@@ -56,12 +58,37 @@ npm i -g https://github.com/tdreid/steem-skiff
     -h, --help             output usage information
 ```
 
+### get-key
+
+```
+  Usage: get-key|gk [options] <user> [password]
+
+  Gets a key given user's password
+
+  Options:
+
+    -t, type <type>  type of key; can be posting, active, or owner (default: posting)
+    -h, --help       output usage information
+```
+
 ### list-post-properties
 
 ```
   Usage: list-post-properties|lpp [options] [limit]
 
   List properties based on [limit] recent posts
+
+  Options:
+
+    -h, --help  output usage information
+```
+
+### make-test-account
+
+```
+  Usage: make-test-account|mta [options] <user> [password]
+
+  Make a test account on https://testnet.steem.vc
 
   Options:
 
