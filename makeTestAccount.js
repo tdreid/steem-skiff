@@ -20,7 +20,7 @@ module.exports = (user, password) => {
           resolveAccount(user, result.password);
         } else {
           console.error(err);
-          process.exit(34);
+          process.exit(55);
         }
       }
     );
