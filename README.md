@@ -13,7 +13,6 @@ npm i -g https://github.com/tdreid/steem-sak
 ## Use
 
 ```
-
   Usage: sak [options] [command]
 
   Options:
@@ -37,7 +36,7 @@ npm i -g https://github.com/tdreid/steem-sak
 
   Options:
 
-    -t, --type <type>  Type of wif; can be posting, active, or owner. (default: posting)
+    -t, --type <type>  type of wif; can be posting, active, or owner. (default: posting)
     -h, --help         output usage information
 ```
 
@@ -50,8 +49,9 @@ npm i -g https://github.com/tdreid/steem-sak
 
   Options:
 
-    -s, --space <space>   Passed as [space] to JSON.stringify() (default: null)
-    -k, --skip-transform  Bypass JSON.stringify()
+    -s, --space <space>   passed as [space] to JSON.stringify() (default: null)
+    -k, --skip-transform  bypass JSON.stringify()
+    -c, --csv             output as comma separated values
     -h, --help            output usage information
 ```
 
