@@ -1,6 +1,7 @@
 const steem = require('steem');
 steem.api.setOptions({ url: 'https://api.steemit.com' });
 
+/** A password is valid if it can generate a valid wif */
 module.exports = (user, password, type) => {
   steem.api.getAccounts([user], (err, result) => {
     const wif = steem.auth.toWif(user, password, type);

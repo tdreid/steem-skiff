@@ -1,6 +1,7 @@
 const prompt = require('prompt');
 const resolveAccount = require('./resolveTestAccount');
 
+/** Prompts for password is none provided, then resolves the command */
 module.exports = (user, password) => {
   if (!password) {
     prompt.message = '';

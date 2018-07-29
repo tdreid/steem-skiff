@@ -1,6 +1,7 @@
 const steem = require('steem');
 steem.api.setOptions({ url: 'https://api.steemit.com' });
 
+/** A private key is validated against the public key of the same type */
 module.exports = (user, wif, type) => {
   steem.api.getAccounts([user], (err, result) => {
     if (!err) {

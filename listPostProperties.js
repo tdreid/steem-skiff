@@ -2,6 +2,9 @@ const steem = require('steem');
 const keys = require('lodash/keys');
 const assign = require('lodash/assign');
 
+/** Output a list of numerable string keyed properties that occurr on at least
+ *  one of that most recent <limit> posts.
+ */
 module.exports = (limit = 1) => {
   steem.api.getDiscussionsByCreated(
     { tag: '', limit: Number(limit) || 1 },

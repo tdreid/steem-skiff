@@ -1,3 +1,4 @@
+/** Different routines check passwords or wifs */
 module.exports = (mode, user, credential, type) => {
   switch (mode) {
     case 'password':

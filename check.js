@@ -1,6 +1,7 @@
 const prompt = require('prompt');
 const checkCredential = require('./checkCredential');
 
+/** Prompt for the credential if none was provided */
 module.exports = (mode, user, credential, cmd) => {
   if (!credential) {
     prompt.message = '';

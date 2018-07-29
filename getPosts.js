@@ -1,9 +1,13 @@
 const steem = require('steem');
 
+/** Query n recent posts from the steem blockchain, filtered and formatted
+ * accordingly.
+ */
 module.exports = (tag, limit, properties, cmd) => {
   steem.api.getDiscussionsByCreated({ tag, limit }, (err, result) => {
     if (!err) {
       if (properties.length > 0) {
+        // Mutate each object in the array. Keep only the properties of interest
         const pick = require('lodash/pick');
         result = result.map(post => pick(post, properties));
       }
@@ -23,6 +27,9 @@ module.exports = (tag, limit, properties, cmd) => {
           });
           break;
         case 'stringified':
+          // An integer should indent that many spaces (up to ten). Any other
+          // string should be inserted as placeholder.  Make sure integers are
+          // not treated as strings
           console.log(
             JSON.stringify(
               result,
