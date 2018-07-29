@@ -1,17 +1,17 @@
 {
-  "name": "steem-sak",
+  "name": "steem-skiff",
   "version": "0.1.0",
   "description": "Steem blockchain utility CLI",
-  "main": "steem-sak.js",
+  "main": "steem-skiff.js",
   "bin": {
-    "sak": "./steem-sak.js"
+    "skiff": "./steem-skiff.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tdreid/steem-sak.git"
+    "url": "git+https://github.com/tdreid/steem-skiff.git"
   },
   "keywords": [
     "steem",
@@ -22,9 +22,9 @@
   "author": "Trevor Reid <trevor.d.reid@gmail.com> (http://tdreid.github.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tdreid/steem-sak/issues"
+    "url": "https://github.com/tdreid/steem-skiff/issues"
   },
-  "homepage": "https://github.com/tdreid/steem-sak#readme",
+  "homepage": "https://github.com/tdreid/steem-skiff#readme",
   "dependencies": {
     "commander": "^2.16.0",
     "jsonexport": "^2.2.1",

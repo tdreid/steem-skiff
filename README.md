@@ -1,19 +1,17 @@
-# steem-sak
+# steem-skiff
 __Steem blockchain utility CLI__
-
-Swiss Army Knife | Steem All Knowing | Etc.
 
 ## Install
 
 ```
-npm i -g https://github.com/tdreid/steem-sak
+npm i -g https://github.com/tdreid/steem-skiff
 
 ```
 
 ## Use
 
 ```
-  Usage: sak [options] [command]
+  Usage: skiff [options] [command]
 
   Options:
 

@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 const current_version = require('./package.json').version;
-const sak = require('commander');
+const skiff = require('commander');
 
-sak
+skiff
   .command('check <mode> <user> [credential]')
   .alias('ck')
   .option(
@@ -15,7 +15,7 @@ sak
   .description('Check if a credential is legit')
   .action(require('./check'));
 
-sak
+skiff
   .command('get-posts <tag> <limit> [properties...]')
   .alias('gp')
   .description('Gets the most recent <limit> posts for <tag>')
@@ -24,7 +24,7 @@ sak
   .option('-c, --csv', 'output as comma separated values')
   .action(require('./getPosts'));
 
-sak
+skiff
   .command('list-post-properties [limit]')
   .alias('lpp')
   .description(
@@ -32,6 +32,6 @@ sak
   )
   .action(require('./listPostProperties'));
 
-sak.version(current_version, '-v, --version').parse(process.argv);
+skiff.version(current_version, '-v, --version').parse(process.argv);
 
-if (sak.args.length === 0) sak.help();
+if (skiff.args.length === 0) skiff.help();
