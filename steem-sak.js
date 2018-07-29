@@ -8,7 +8,7 @@ sak
   .alias('ck')
   .option(
     '-t, --type <type>',
-    'Type of wif; can be posting, active, or owner.',
+    'type of wif; can be posting, active, or owner.',
     /^(posting|active|owner)$/i,
     'posting'
   )
@@ -19,9 +19,9 @@ sak
   .command('get-posts <tag> <limit> [properties...]')
   .alias('gp')
   .description('Gets the most recent <limit> posts for <tag>')
-  .option('-s, --space <space>', 'Passed as [space] to JSON.stringify()', null)
-  .option('-k, --skip-transform', 'Bypass JSON.stringify()')
-  .option('-c, --csv', 'Output as comma seperated values')
+  .option('-s, --space <space>', 'passed as [space] to JSON.stringify()', null)
+  .option('-k, --skip-transform', 'bypass JSON.stringify()')
+  .option('-c, --csv', 'output as comma separated values')
   .action(require('./getPosts'));
 
 sak
