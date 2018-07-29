@@ -8,7 +8,7 @@ skiff
   .alias('ck')
   .option(
     '-t, --type <type>',
-    'type of wif; can be posting, active, or owner.',
+    'type of wif; can be posting, active, or owner',
     /^(posting|active|owner)$/i,
     'posting'
   )
