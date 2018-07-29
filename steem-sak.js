@@ -5,6 +5,7 @@ const sak = require('commander');
 
 sak
   .command('check <mode> <user> [credential]')
+  .alias('ck')
   .option(
     '-t, --type <type>',
     'Type of wif; can be posting, active, or owner.',
@@ -16,6 +17,7 @@ sak
 
 sak
   .command('get-posts <tag> <limit> [properties...]')
+  .alias('gp')
   .description('Gets the most recent <limit> posts for <tag>')
   .option('-s, --space <space>', 'Passed as [space] to JSON.stringify()', null)
   .option('-k, --skip-transform', 'Bypass JSON.stringify()')
