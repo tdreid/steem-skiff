@@ -13,6 +13,13 @@ skiff
     'posting'
   )
   .description('Check if a credential is legit')
+  .on('--help', () =>
+    console.log(`
+  Remarks:
+       
+  <mode> can be either password or wif
+       `)
+  )
   .action(require('./check'));
 
 skiff

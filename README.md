@@ -36,6 +36,10 @@ npm i -g https://github.com/tdreid/steem-skiff
 
     -t, --type <type>  type of wif; can be posting, active, or owner. (default: posting)
     -h, --help         output usage information
+
+  Remarks:
+       
+  <mode> can be either password or wif
 ```
 
 ### get-posts    
