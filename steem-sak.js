@@ -21,6 +21,14 @@ sak
   .option('-k, --skip-transform', 'Bypass JSON.stringify()')
   .action(require('./getPosts'));
 
+sak
+  .command('list-post-properties [limit]')
+  .description(
+    'See a list of available properties based on [limit] recent posts'
+  )
+  .alias('lpp')
+  .action(require('./listPostProperties'));
+
 sak.version(current_version, '-v, --version').parse(process.argv);
 
 if (sak.args.length === 0) sak.help();
