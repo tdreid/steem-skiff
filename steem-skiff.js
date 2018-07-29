@@ -53,6 +53,12 @@ skiff
   .description('List properties based on [limit] recent posts')
   .action(require('./listPostProperties'));
 
+skiff
+  .command('make-test-account <user> [password]')
+  .alias('mta')
+  .description('Make a test account on https://testnet.steem.vc')
+  .action(require('./makeTestAccount'));
+
 skiff.version(current_version, '-v, --version').parse(process.argv);
 
 if (skiff.args.length === 0) skiff.help();
