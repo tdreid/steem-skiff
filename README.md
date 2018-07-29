@@ -22,7 +22,7 @@ npm i -g https://github.com/tdreid/steem-skiff
 
     check|ck [options] <mode> <user> [credential]         Check if a credential is legit
     get-posts|gp [options] <tag> <limit> [properties...]  Gets the most recent <limit> posts for <tag>
-    list-post-properties|lpp [limit]                      See a list of available properties based on [limit] recent posts
+    list-post-properties|lpp [limit]                      List properties based on [limit] recent posts
 ```    
     
 ### check
