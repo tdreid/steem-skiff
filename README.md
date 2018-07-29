@@ -13,22 +13,25 @@ npm i -g https://github.com/tdreid/steem-sak
 ## Use
 
 ```
+
   Usage: sak [options] [command]
 
   Options:
 
-    -v, --version                                      output the version number
-    -h, --help                                         output usage information
+    -v, --version                                         output the version number
+    -h, --help                                            output usage information
 
   Commands:
 
-    check [options] <mode> <user> [credential]         Check if a credential is legit
+    check|ck [options] <mode> <user> [credential]         Check if a credential is legit
+    get-posts|gp [options] <tag> <limit> [properties...]  Gets the most recent <limit> posts for <tag>
+    list-post-properties|lpp [limit]                      See a list of available properties based on [limit] recent posts
 ```    
     
 ### check
 
 ```
-  Usage: check [options] <mode> <user> [credential]
+  Usage: check|ck [options] <mode> <user> [credential]
 
   Check if a credential is legit
 
@@ -41,7 +44,7 @@ npm i -g https://github.com/tdreid/steem-sak
 ### get-posts    
 
 ```
-  Usage: get-posts [options] <tag> <limit> [properties...]
+  Usage: get-posts|gp [options] <tag> <limit> [properties...]
 
   Gets the most recent <limit> posts for <tag>
 
