@@ -36,6 +36,18 @@ skiff
   .action(require('./getPosts'));
 
 skiff
+  .command('get-key <user> [password]')
+  .alias('gk')
+  .description("Gets a key given user's password")
+  .option(
+    '-t, type <type>',
+    'type of key; can be posting, active, or owner',
+    /^(posting|active|owner)$/i,
+    'posting'
+  )
+  .action(require('./getKey'));
+
+skiff
   .command('list-post-properties [limit]')
   .alias('lpp')
   .description('List properties based on [limit] recent posts')
