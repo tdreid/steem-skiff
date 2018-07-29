@@ -21,6 +21,7 @@ sak
   .description('Gets the most recent <limit> posts for <tag>')
   .option('-s, --space <space>', 'Passed as [space] to JSON.stringify()', null)
   .option('-k, --skip-transform', 'Bypass JSON.stringify()')
+  .option('-c, --csv', 'Output as comma seperated values')
   .action(require('./getPosts'));
 
 sak
