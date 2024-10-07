@@ -1,4 +1,4 @@
-# steem-skiff
+# steem-skiff ([THIS PROJECT HAS BEEN ARCHIVED](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories))
 __Steem blockchain utility CLI__
 
 ## Install
